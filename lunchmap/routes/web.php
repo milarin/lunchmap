@@ -24,3 +24,7 @@ Route::delete('/shop/{id}', 'ShopController@destroy')->name('shop.destroy');
 Route::get('/', function () {
     return redirect('/shops');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
